@@ -6,20 +6,24 @@ import React, { useEffect, useState } from "react";
 import { Container, Form, Button } from "react-bootstrap";
 
 function LoginForm() {
-  const [windowWidth, setWindowWidth] = useState(window?.innerWidth);
+  const [windowWidth, setWindowWidth] = useState();
 
   // Function to update the window width state when the window is resized
   const handleResize = () => {
-    setWindowWidth(window.innerWidth);
+    setWindowWidth(window?.innerWidth);
   };
 
   useEffect(() => {
+    setWindowWidth(window.innerWidth);
+  }, []);
+
+  useEffect(() => {
     // Add a resize event listener to track window resizing
-    window.addEventListener("resize", handleResize);
+    window?.addEventListener("resize", handleResize);
 
     // Remove the event listener when the component unmounts
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window?.removeEventListener("resize", handleResize);
     };
   }, []); // Only run this effect once on component mount
 
