@@ -23,7 +23,6 @@ function LoginForm() {
     };
   }, []); // Only run this effect once on component mount
 
-  // Define a function to calculate the new width and height based on the window width
   const calculateDimensions = () => {
     // Adjust these values as needed for your responsive design
     if (windowWidth < 576) {
