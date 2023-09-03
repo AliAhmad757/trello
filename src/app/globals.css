@@ -1,0 +1,145 @@
+:root {
+  --primarycolor: #8782f6;
+  --text-color: #545454;
+  --success-color: #5aac44;
+  --button-boxShadow: rgba(0, 0, 0, 0.2) 1px 1px 5px 0; /* Box shadow with spread radius */
+  --main-color: #f9fafc;
+  --card-shadow: rgba(0, 0, 0, 0.1) 0 0 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+svg {
+  vertical-align: bottom !important;
+}
+
+body main {
+  background-color: var(--main-color);
+  color: var(--text-color);
+}
+
+.shadow-text {
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  line-height: 28px;
+  font-weight: 500;
+}
+
+.btn {
+  font-weight: 500 !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  letter-spacing: -0.01em !important;
+  padding: 9px !important;
+}
+
+.btn-outline {
+  background-color: white !important;
+  box-shadow: var(--button-boxShadow) !important;
+}
+
+.btn-outline:hover {
+  background-color: var(--main-color) !important;
+  box-shadow: var(--button-boxShadow) !important;
+}
+
+.btn-outline:active {
+  background: #eee !important;
+  border: 2px solid #cdd2d4 !important;
+}
+
+.btn-success {
+  background-color: #5aac44 !important;
+}
+
+.btn-success:hover {
+  background-color: #5fb64d !important;
+}
+
+.btn-success:active {
+  background: #51a839 !important;
+  border: 2px solid #5aac44 !important;
+}
+
+.login hr {
+  margin-top: 25px;
+}
+
+a {
+  color: var(--text-color) !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: var(--primarycolor) !important;
+}
+
+main .login a {
+  color: var(--primarycolor) !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+}
+
+input:focus {
+  border: 2px solid var(--primarycolor) !important;
+  box-shadow: none !important;
+  border-color: var(--primarycolor) !important;
+}
+
+/* CSS for screens smaller than 576px (Extra Small) */
+@media (max-width: 575.98px) {
+  body main {
+    background-color: white;
+  }
+}
+
+@media (min-width: 576px) {
+  main .form {
+    background-color: #ffffff;
+    border-radius: 3px;
+    padding: 25px 40px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 0 10px;
+    z-index: 1;
+  }
+
+  main .login .left {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+
+  main .login .right {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+nav {
+  border-bottom: 1px solid lightgray;
+}
+
+/* CSS for screens between 576px and 767px (Small) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+}
+
+/* CSS for screens between 768px and 991px (Medium) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* Your styles here */
+}
+
+/* CSS for screens larger than 992px (Large) */
+@media (min-width: 992px) {
+  /* Your styles here */
+}
